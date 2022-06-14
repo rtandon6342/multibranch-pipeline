@@ -26,9 +26,6 @@ pipeline {
                     }
                 }
             }
-            steps {
-                echo 'Hello World'
-            }
         }
 
         stage('Hello_Again_test') {
