@@ -5,7 +5,6 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sh 'sleep 10'
             }
         }
 
@@ -14,7 +13,6 @@ pipeline {
                 stage(parallel_1) {
                     steps {
                         sh 'echo "Hello World"'
-                        sh 'sleep 10'
                     }
                 }
                 stage(parallel_2) {
@@ -24,7 +22,6 @@ pipeline {
                         touch new.txt
                         pwd
                         ls
-                        sleep 15
                         '''
                     }
                 }
@@ -34,7 +31,6 @@ pipeline {
         stage('Hello_Again_test') {
             steps {
                 echo 'Hello World'
-                sh 'sleep 10'
             }
         }
     }
